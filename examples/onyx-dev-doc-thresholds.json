@@ -1,0 +1,17 @@
+{
+  "repo": "onyx-dev-doc-deck",
+  "thresholds": {
+    "signal": 4,
+    "slack": 2,
+    "confidence": 2,
+    "drag": 3,
+    "ship": 175,
+    "watch": 128
+  },
+  "terms": [
+    "change width",
+    "diagnostic quality",
+    "review cost",
+    "safe rewrite"
+  ]
+}
