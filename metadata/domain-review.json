@@ -1,0 +1,73 @@
+{
+  "repo": "onyx-dev-doc-deck",
+  "language": "Rust",
+  "category": "Developer tools",
+  "goal": "Build a Rust toolkit that studies doc behavior through append-only fixtures, with checkpoint recovery checks and no network dependency.",
+  "review_model": {
+    "terms": [
+      "change width",
+      "diagnostic quality",
+      "review cost",
+      "safe rewrite"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "change width",
+      "signal": 69,
+      "slack": 47,
+      "drag": 29,
+      "confidence": 87,
+      "score": 185,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "diagnostic quality",
+      "signal": 67,
+      "slack": 26,
+      "drag": 17,
+      "confidence": 68,
+      "score": 177,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "review cost",
+      "signal": 69,
+      "slack": 29,
+      "drag": 26,
+      "confidence": 63,
+      "score": 152,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "safe rewrite",
+      "signal": 57,
+      "slack": 35,
+      "drag": 28,
+      "confidence": 62,
+      "score": 127,
+      "lane": "watch"
+    },
+    {
+      "name": "stale",
+      "focus": "change width",
+      "signal": 63,
+      "slack": 27,
+      "drag": 11,
+      "confidence": 86,
+      "score": 206,
+      "lane": "ship"
+    }
+  ]
+}
